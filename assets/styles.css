@@ -2,5 +2,88 @@
     margin:0; 
     padding:0; 
     box-sizing: border-box;
-    font-family: sans-serif; 
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
 }
+
+:root{
+    --Light-Cyan:hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    font-size: 28px;
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    height: 100%;
+    width: 100%;
+}
+
+.advice{
+    background-color: var(--Dark-Grayish-Blue);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    height: 350px;
+    width: 520px;
+}
+
+.advice h3{
+    color: var(--Neon-Green);
+    font-size: 0.5rem;
+}
+
+.advice p{
+    color: var(--Light-Cyan);
+    font-size: 0.7rem;
+}
+
+.rgenerate-bt{
+    overflow: visible;
+    position: relative;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--Neon-Green);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.rgenerate-bt img{
+    display: block;
+    margin: 0 auto;
+    height: 35%;
+}
+
+.rgenerate-bt:hover {
+    box-shadow: 0 0 20px var(--Neon-Green);
+    transition: box-shadow 0.3s ease-in-out;
+}
+/*
+.rgenerate-bt:hover:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Neon-Green);
+    opacity: 0.2;
+    border-radius: 100%;
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out;
+}*/
