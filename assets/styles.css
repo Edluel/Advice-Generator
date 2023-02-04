@@ -72,18 +72,6 @@ body{
 .rgenerate-bt:hover {
     box-shadow: 0 0 20px var(--Neon-Green);
     transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
-/*
-.rgenerate-bt:hover:after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--Neon-Green);
-    opacity: 0.2;
-    border-radius: 100%;
-    transform: scale(1.3);
-    transition: all 0.3s ease-in-out;
-}*/
+
