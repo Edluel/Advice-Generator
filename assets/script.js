@@ -53,9 +53,9 @@ function searchAdvice() {
             alert('Please enter an integer');
             return;
         }
-    }
+    } 
     else {
-
+        searchByWord(input);
     }
 }
 
@@ -67,5 +67,17 @@ async function searchById(id){
 
     showAdvice(data.slip.id, data.slip.advice);
 }
+
+async function searchByWord(string){
+    const response = await fetch('https://api.adviceslip.com/advice/search/'+string);
+    const data = await response.json();
+
+
+
+
+    showAdvice(data.slips[0].id, data.slips[0].advice);
+}
+
+
 
 
