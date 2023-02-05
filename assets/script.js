@@ -1,17 +1,17 @@
+function showAdvice(id, advice) {
+    document.querySelector('.adv-id').innerHTML = id;
+    document.querySelector('.adv-content').textContent = advice;
+}
+
 async function showRandom() {
 
     const response = await fetch('https://api.adviceslip.com/advice');
     const data = await response.json();
 
-    const id = document.querySelector('.adv-id');
-    const advice = document.querySelector('.adv-content');
-
-    id.innerHTML = data.slip.id;
-    advice.textContent = data.slip.advice;
+    showAdvice(data.slip.id, data.slip.advice);
 
 }
 showRandom();
-
 
 
 function resizeAdvice() {
@@ -40,12 +40,32 @@ function resizeAdvice() {
 resizeAdvice();
 
 
+function searchAdvice() {
+    const option = document.querySelector("#search-type").value;
+    const input = document.querySelector("#search-input").value;
+    document.querySelector('#search-input').value = '';
 
-/* /integer to user search by id and /search/string to search by word
-word results are a object with arrays and to acces each array item 
-use slips[index] instead of slip*/
+    if (option === 'id') {
+        if (Number.isInteger(parseInt(input))) {
+            searchById(input);
+        }
+        else{
+            alert('Please enter an integer');
+            return;
+        }
+    }
+    else {
 
-/* minha idéia para melhoria, adicionar barra de busca por id e por
-palavra, porém a busca por palávra deve invés de exibir o array
-de resultados deve implementar uma função de carrossel onde
-o usuario pode navegar pelos avices retornados pela busca */
+    }
+}
+
+async function searchById(id){
+    const response = await fetch('https://api.adviceslip.com/advice/'+id);
+    const data = await response.json();
+
+    if(id < 1 || id > 224){alert("Advice slip not found."); return;}
+
+    showAdvice(data.slip.id, data.slip.advice);
+}
+
+

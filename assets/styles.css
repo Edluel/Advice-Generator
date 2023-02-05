@@ -21,6 +21,7 @@ body{
     width: 100%;
 }
 
+/* Advice card */
 .advice{
     background-color: var(--Dark-Grayish-Blue);
     position: absolute;

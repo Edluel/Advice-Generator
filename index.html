@@ -12,6 +12,17 @@
 </head>
 <body>
     
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <select id="search-type">
+          <option value="id">ID</option>
+          <option value="word">Word</option>
+        </select>
+        <button id="search-button" onclick="searchAdvice()">Search</button>
+    </div>
+      
+
+
     <div class="advice">
         <div>
             <h3>ADVICE #<span class="adv-id"></span></h3>
