@@ -47,6 +47,10 @@ body{
     font-size: 0.7rem;
 }
 
+.adivider img{
+    width: 100%;
+}
+
 .rgenerate-bt{
     overflow: visible;
     position: relative;
