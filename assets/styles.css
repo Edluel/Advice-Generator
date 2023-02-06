@@ -100,3 +100,17 @@ body{
     cursor: pointer;
 }
 
+/* Navigation buttons*/
+.nav-buttons {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    width: 250px;
+}
+
+
+

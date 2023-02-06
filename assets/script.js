@@ -10,6 +10,8 @@ async function showRandom() {
 
     showAdvice(data.slip.id, data.slip.advice);
 
+    document.querySelector('.nav-buttons').style = 'display:none;';
+
 }
 showRandom();
 
@@ -66,18 +68,54 @@ async function searchById(id){
     if(id < 1 || id > 224){alert("Advice slip not found."); return;}
 
     showAdvice(data.slip.id, data.slip.advice);
+
+    document.querySelector('.nav-buttons').style = 'display:none;';
 }
 
 async function searchByWord(string){
     const response = await fetch('https://api.adviceslip.com/advice/search/'+string);
     const data = await response.json();
 
+    const length = data.total_results -1;
+    let i = 0;
 
+    //frist load
+    showAdvice(data.slips[i].id, data.slips[i].advice)
+    document.querySelector('.nav-buttons').style = 'display:flex;';
+    updateArrows(i, length);
+    
+    //navigation arrow click
+    document.querySelector('.prev-bt').addEventListener('click', function(){
+        if (i > 0) {
+            i--;
+            showAdvice(data.slips[i].id, data.slips[i].advice);
+        }
+        updateArrows(i, length);
+    });
 
+    document.querySelector('.next-bt').addEventListener('click', function(){
+        if (i < length) {
+            i++;
+            showAdvice(data.slips[i].id, data.slips[i].advice);
+        }
+        updateArrows(i, length);
+    });
 
-    showAdvice(data.slips[0].id, data.slips[0].advice);
 }
 
+function updateArrows(i, length){
+    if (i > 0 ){
+        document.querySelector('.prev-bt').style.cssText = 'filter: none; cursor: pointer;';
+    }
+    else{
+        document.querySelector('.prev-bt').style.cssText = 'filter: grayscale(100%); cursor: default;';
+    }
 
+    if (i < length){
+        document.querySelector('.next-bt').style.cssText = 'filter: none; cursor: pointer;';
+    }
+    else{
+        document.querySelector('.next-bt').style.cssText = 'filter: grayscale(100%); cursor: default;';
+    }
 
-
+}
