@@ -7,14 +7,14 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-Advice generator made by consuming external API and i personaly made more than what was given as challenge
+The advice generator was created by using an external API and I personally managed more than the given challenge
 
 
 ## <a id="features">Features</a>
 
 - Use external API
 - Generates random advice from API data by clicking on dice
-  - Neon hover on random button
+  - Neon hover on the random button
 - Search bar
 - Options to search by id or string
 - Navigation arrows through search results by words
