@@ -106,7 +106,7 @@ body{
     display: none;
     flex-direction: row;
     left: 50%;
-    bottom: 50px;
+    bottom: -40px;
     transform: translateX(-50%);
     justify-content: space-between;
     width: 250px;
