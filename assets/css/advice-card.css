@@ -1,47 +1,3 @@
-*{ 
-    margin:0; 
-    padding:0; 
-    box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 800;
-}
-
-:root{
-    --Light-Cyan:hsl(193, 38%, 86%);
-    --Neon-Green: hsl(150, 100%, 66%);
-    --Grayish-Blue: hsl(217, 19%, 38%);
-    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
-    --Dark-Blue: hsl(218, 23%, 16%);
-    font-size: 28px;
-}
-
-body{
-    background-color: var(--Dark-Blue);
-    height: 100%;
-    width: 100%;
-}
-
-
-/* Search bar */
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-}
-
-#search-input{
-    margin-right: 5px;
-    padding-left: 5px;
-    padding-right: 10px;
-}
-
-#search-button{
-    margin-left: 5px;
-    padding-left: 1px;
-    padding-right: 1px;
-}
-
-/* Advice card */
 .advice{
     background-color: var(--Dark-Grayish-Blue);
     position: absolute;
@@ -100,18 +56,3 @@ body{
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
-
-/* Navigation buttons*/
-.nav-buttons {
-    position: absolute;
-    display: none;
-    flex-direction: row;
-    left: 50%;
-    bottom: -40px;
-    transform: translateX(-50%);
-    justify-content: space-between;
-    width: 250px;
-    z-index: 1;
-}
-
-

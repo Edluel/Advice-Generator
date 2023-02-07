@@ -1,0 +1,11 @@
+.nav-buttons {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    width: 250px;
+    z-index: 1;
+}
